@@ -111,7 +111,7 @@ int main()
 		if (!gameOver) {
 			if (!paused) {
 				used = false;
-				float time = clock.getElapsedTime().asMicroseconds(); //дать прошедшее время в микросекундах
+				float time = clock.getElapsedTime().asMicroseconds(); //Г¤Г ГІГј ГЇГ°Г®ГёГҐГ¤ГёГҐГҐ ГўГ°ГҐГ¬Гї Гў Г¬ГЁГЄГ°Г®Г±ГҐГЄГіГ­Г¤Г Гµ
 				clock.restart();
 				time = time / 4000;
 				float speed = 3.5 * time;
@@ -143,14 +143,14 @@ int main()
 					frameCount -= 7;
 				}
 
-				if (!mainHero.isJump) {//если НЕ В ПРЫЖКЕ
-					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {//нажатие пробела
+				if (!mainHero.isJump) {//ГҐГ±Г«ГЁ ГЌГ… Г‚ ГЏГђГ›Г†ГЉГ…
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {//Г­Г Г¦Г ГІГЁГҐ ГЇГ°Г®ГЎГҐГ«Г 
 						jumpSound.play();
-						mainHero.isJump = true; //тут кароче бул который отвечает за прыжок подрубается
+						mainHero.isJump = true; //ГІГіГІ ГЄГ Г°Г®Г·ГҐ ГЎГіГ« ГЄГ®ГІГ®Г°Г»Г© Г®ГІГўГҐГ·Г ГҐГІ Г§Г  ГЇГ°Г»Г¦Г®ГЄ ГЇГ®Г¤Г°ГіГЎГ ГҐГІГ±Гї
 					}
 				}
 				else {
-					mainHero.jump(time); //в этой функци
+					mainHero.jump(time); //Гў ГЅГІГ®Г© ГґГіГ­ГЄГ¶ГЁ
 				}
 
 				if (createCounter <= 0) {
@@ -254,7 +254,7 @@ int main()
 				else {
 					mainHero.sprite.setColor(sf::Color(10, 10, 200));
 				}
-
+				/*
 				if (pause_counter < 0) {
 					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 						sf::Int32 integer;
@@ -262,6 +262,7 @@ int main()
 						sf::sleep(sf::milliseconds(integer));
 					}
 				}
+				*/
 				window.clear();
 				window.draw(back_g.sprite_1);
 				window.draw(back_g.sprite_2);
